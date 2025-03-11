@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+>
+<title>Your Topic Title</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Sticky Navigation Menu -->
+<nav class="navbar">
+    <a href="index.html" class="logo">GUITARS</a>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="index.html#project-gallery">Guitars</a>
+    </div>
+    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+</nav>
+    <header class="banner">
+        <h1>Guitar Corner</h1>
+        <p>Get started with your music career now</p>
+    </header>
+    <section class="static-content">
+        <h2>Always wanted to play guitar?</h2>
+        <p>Now you can get your opportunity! Purchasing one of our guitars will be an easy first step to getting a headstart on your muscial journey!</p>
+        <button onclick="document.getElementById('signup-form').style.display='block'">Contact Me</button>
+        <div id="signup-form" class="form-popup">
+            <form class="form-container">
+                <h2>Sign Up if Interested For Further Information</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="fullname" placeholder="Enter your name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required> 
+                
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="document.getElementById('signup-form').style.display='none'">Close</button>
+            </form>
+        </div>
+    </section>
+    <section class="recent-projects">
+        <h2>Our Guitars</h2>
+        <div id="project-gallery">
+            <div class="project-gallery">
+                <img src="images/guitar1.jpeg" alt="Classical Guitar">
+                <img src="images/guitar2.jpeg" alt="Acoustic Guitar">
+                <img src="images/guitar3.jpeg" alt="Electric Guitar">
+            </div>
+        </div>
+
+    </section>
+    <section class="secondary-video">
+        <h2>Listen to the music</h2>
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/63hdfvqiIV8">
+    </iframe>
+    </section>
+    
+    <section class="recent-posts">
+    <h2>Related Articles</h2>
+    <div class="posts-grid">
+        <article class="post-card">
+            <img src="images/guitar4.jpeg" alt="Guitar tuners">
+            <div class="post-content">
+                <h3>How to tune your new guitar</h3>
+                <p>Standard tuning begins with the lowest string, low E, and ends with the highest, high E. Start by turning the low E string to the proper pitch. Then continue this pattern for all strings. </p>
+            </div>
+        </article>
+        <article class="post-card">
+            <img src="images/guitar5.png" alt="Example chord">
+            <div class="post-content">
+                <h3>All about playing chords</h3>
+                <p>The most common chords include major chords which are G, C, and D. These are bright and happy. Minor chords, like Am, Em, and Dm, are known for their emotional tones.</p>
+            </div>
+        </article>
+    </div>
+</section>
+<section class="testimonials">
+    <h2>Reviews from our music enthusiasts!</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial pink horizontal">
+            <h3>Sarah Thompson</h3>
+                <p class="verified">Playing for 6 months</p>
+                <p>"Great selection and friendly staff! Found the perfect acoustic guitar at a great price!"</p>
+
+            </div>
+            
+            <div class="testimonial gray vertical">
+                
+                <h3>Michael Ramirez</h3>
+                <p class="verified">Playing for 9 years</p>
+                <p>"Awesome customer service and knowledgable staff. Will definitely be coming back for more gear."</p>
+            
+            </div>
+            
+            <div class="testimonial blue">
+                
+                <h3>Emily Chen</h3>
+                <p class="verified">New player</p>
+                <p>"Loved the variety of guitars available. The staff helped me find exactly what I needed!"</p>
+                
+            </div>
+            
+            <div class="testimonial red horizontal">
+                
+                <h3>Daniel Patel</h3>
+                <p class="verified">Playing for 10 years</p>
+                <p>"Impressive collection and reasonable prices. They even threw in a free set of strings!"</p>
+                
+            </div>
+            
+            <div class="testimonial green vertical">
+                
+                <h3>Oliva Cooper</h3>
+                <p class="verified">New player</p>
+                <p>"Excellent experience! The staff was patient and helped me pick the right guitar for my skill level!"</p>
+                
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Guitar Corner | All Rights Reserved | <a href="https://docs.google.com/document/d/15-69hgBxkq1IbMNh2t68pMy706G0sOl6E-VmelkjREw/edit?tab=t.0" target="_blank">
+            Sources
+        </a>
+    </p>
+    </footer>
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        // Close mobile menu when a nav link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+

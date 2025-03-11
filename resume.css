@@ -1,0 +1,191 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #073032;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 2.5rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    color: #000000;
+    font-size: 1.1rem;
+    margin: 0.3rem 0;
+}
+
+/* Section Styles */
+section {
+    background: white;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+}
+
+h2 {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+h3 {
+    color: #000000;
+    font-size: 1.25rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+/* List Styles */
+ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+li {
+    margin: 0.5rem 0;
+    color: #000000;
+}
+
+/* Project Section Specific Styles */
+section:nth-of-type(4) p {
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+/* Experience Section Specific Styles */
+section:nth-of-type(5) li {
+    margin-left: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+/* Links Styles */
+a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #000000;
+}
+/* Contact information styles */
+.contact-info {
+    line-height: 2;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #000000;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+    margin: 0 2px;
+}
+
+.contact-link[href^="https://linkedin"] {
+    color: #000000;  /* LinkedIn blue */
+}
+
+.contact-link[href^="mailto"] {
+    color: #000000;  /* Email red */
+}
+
+.contact-link[href^="tel"] {
+    color: #000000;  /* Phone green */
+}
+
+.contact-link:hover {
+    opacity: 0.8;
+}
+
+.contact-icon {
+    vertical-align: middle;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+
+/* Subtle Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: calc(var(--order) * 0.1s);
+}

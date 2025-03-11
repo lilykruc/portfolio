@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Guitar Corner</title>
+    <link rel="stylesheet" href="aboutme-styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation Menu -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">GUITARS</a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="#guitars">Guitars</a>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <!-- About Me Content -->
+    <div class="about-container">
+        <div class="about-header">
+            <h1>About Me</h1>
+        </div>
+        
+        <div class="about-content">
+            <div class="profile-image">
+                <img src="images/profile.jpeg" alt="Store Owner" class="profile-img">
+            </div>
+            
+            <div class="bio">
+                <h2>Lily, Store Owner</h2>
+                <p>
+                 Lily is the passionate founder of Guitar Corner, a premier destination for guitar enthusiasts seeking high-quality instruments and expert advice. With years of experience in the music industry and a deep love for craftsmanship, she curates a selection of guitars that cater to players of all levels.
+                </p>
+                <p>
+                Whether you're a beginner looking for your first instrument or a seasoned musician searching for a unique piece, Lily is dedicated to helping you find the perfect match. Her commitment to quality, customer service, and fostering a vibrant music community sets her business apart.
+                </p>
+                <p>
+                Beyond selling guitars, Lily believes in the power of music to inspire and connect people. She regularly shares tips, guides, and personal insights on her website, helping musicians refine their skills and deepen their appreciation for their craft. 
+                </p> 
+                <p>
+                Whether through handpicked selections, expert recommendations, or a genuine love for music, she ensures that every customer leaves feeling excited and confident about their musical journey.
+                </p>
+                
+                <a href="resume.html" class="resume-btn">View My Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Guitar Corner | All Rights Reserved | <a href="https://docs.google.com/document/d/15-69hgBxkq1IbMNh2t68pMy706G0sOl6E-VmelkjREw/edit?tab=t.0" target="_blank">
+            Sources
+        </a>
+    </p>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        // Close mobile menu when a nav link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
